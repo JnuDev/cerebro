@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.meli.cerebro.service.domain.Human;
 
-public interface DnaHumanRepository extends MongoRepository<Human, String> {
+public interface HumanRepository extends MongoRepository<Human, String> {
 
 	public Human findByDna(String dna);
 		

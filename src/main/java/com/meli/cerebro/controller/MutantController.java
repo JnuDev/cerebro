@@ -12,7 +12,6 @@ import com.meli.cerebro.exception.BaseException;
 import com.meli.cerebro.service.MutantService;
 import com.meli.cerebro.service.domain.pojo.Dna;
 
-import io.swagger.annotations.ApiOperation;
 
 @RestController
 public class MutantController {
@@ -24,7 +23,7 @@ public class MutantController {
 		this.mutantService = mutantService;
 	}
 
-	@ApiOperation(value = "", notes = "Mutant detection service")
+	
 	@RequestMapping(value = "/mutant", method = RequestMethod.POST)
 	public ResponseEntity<String> isMutant(@RequestBody Dna dna) {
 

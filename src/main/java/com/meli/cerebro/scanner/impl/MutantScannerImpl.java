@@ -1,14 +1,16 @@
 package com.meli.cerebro.scanner.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.meli.cerebro.exception.CerebroException;
-import com.meli.cerebro.repository.DnaHumanRepository;
+import com.meli.cerebro.repository.HumanRepository;
 import com.meli.cerebro.scanner.DnaSequencer;
 import com.meli.cerebro.scanner.MutantScanner;
 import com.meli.cerebro.service.domain.Human;
 import com.meli.cerebro.validation.DnaValidation;
 
+@Component
 public class MutantScannerImpl implements MutantScanner {
 
 	@Autowired
@@ -17,7 +19,7 @@ public class MutantScannerImpl implements MutantScanner {
 	@Autowired
 	DnaSequencer dnaSequencer;
 	
-	private DnaHumanRepository dnaHumanRepository;
+	private HumanRepository dnaHumanRepository;
 	
 	private static final int MIN_SEQUENCES = 2;
 	
@@ -27,7 +29,7 @@ public class MutantScannerImpl implements MutantScanner {
 		int sequences = 0;
 
 		validation.validate(dna);
-
+		
 		sequences = dnaSequencer.getSequences(dna);
 		if (sequences >= MIN_SEQUENCES) {
 			isMutant = true;

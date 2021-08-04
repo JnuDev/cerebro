@@ -9,5 +9,13 @@ class CerebroApplicationTests {
 	@Test
 	void contextLoads() {
 	}
+	@Test
+	public void main() {
+		CerebroApplication.main(getArgs());
+	}
 
+	private String[] getArgs() {
+		String[] args = {};
+		return args;
+	}
 }
