@@ -40,14 +40,14 @@ public class DnaValidationImpl implements DnaValidation {
 		Pattern pattern = Pattern.compile(REGEXR, Pattern.CASE_INSENSITIVE);
 		Matcher matcher = pattern.matcher(str);
 		if (matcher.find()) {
-			throw new CerebroException("Invalid nucleotides! ");
+			throw new CerebroException("Invalid nucleotides!");
 		}
 		
 	}
 
 	private void validateSizeSequence(int seqSize, int dnaSize) throws CerebroException {
 		if (seqSize != dnaSize) {
-			throw new CerebroException("A sequence with the wrong size was found");
+			throw new CerebroException("Invalid size in the DNA sequence");
 		}
 		
 	}

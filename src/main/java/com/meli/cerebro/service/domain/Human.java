@@ -3,7 +3,7 @@ package com.meli.cerebro.service.domain;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "human")
+@Document(collection = "Human")
 public class Human {
 
 	

@@ -120,6 +120,6 @@ public class MutantScannerTest {
 		when(dnaHumanRepository.findByDna(String.join("", dna))).thenThrow(new RuntimeException());
 		
 		Exception e = assertThrows(CerebroException.class, () -> mutantScanner.isMutant(dna));
-		assertEquals("Error saving records into Person table", e.getMessage());
+		assertEquals("Error saving in Human", e.getMessage());
 	}
 }

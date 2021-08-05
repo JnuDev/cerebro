@@ -3,29 +3,32 @@ package com.meli.cerebro.service.domain.pojo;
 
 public class Stats {
 	
-	private int mutansCount;
+	private int mutans;
 	
-	private int humanCount;
+	private int human;
 	
 	private double ratio;
 	
-	
-	public Stats(int mutansCount, int humanCount) {
+	/*
+	 * 
+	 * 
+	 */
+	public Stats(int mutans, int human) {
 		super();
-		this.mutansCount = mutansCount;
-		this.humanCount = humanCount;
-		this.ratio = (mutansCount > 0.0)?Math.round((mutansCount / humanCount)* 10.0)/10.0 :0.0;;
+		this.mutans = mutans;
+		this.human = human;
+		this.ratio = (mutans > 0.0)?Math.round((mutans / human)* 10.0)/10.0 :0.0;;
 	}
 	
 
 	public int getMutansCount() {
-		return mutansCount;
+		return mutans;
 	}
 
 
 
 	public int getHumanCount() {
-		return humanCount;
+		return human;
 	}
 
 

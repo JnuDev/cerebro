@@ -8,7 +8,6 @@ import org.mockito.Mockito;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.meli.cerebro.exception.BaseException;
 import com.meli.cerebro.exception.CerebroException;
 import com.meli.cerebro.service.MutantService;
 import com.meli.cerebro.service.domain.pojo.Dna;

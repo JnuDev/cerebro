@@ -22,13 +22,13 @@ public class DnaValidationTest {
 	@Test
 	public void validateNullDna() throws CerebroException {
 		Exception e = assertThrows(CerebroException.class, () -> dnaValidation.validate(null));
-		assertEquals("DNA cannot be null", e.getMessage());
+		assertEquals("DNA without values", e.getMessage());
 	}
 
 	@Test
 	public void validateDnaStructureFail() throws CerebroException {
 		Exception e = assertThrows(CerebroException.class, () -> dnaValidation.validate(getDnaWihtStructureFail()));
-		assertEquals("Invalid size dna structure", e.getMessage());
+		assertEquals("Invalid size DNA", e.getMessage());
 	}
 
 	@Test
@@ -40,7 +40,7 @@ public class DnaValidationTest {
 	@Test
 	public void validateFormatSequenceDnaFail() throws CerebroException {
 		Exception e = assertThrows(CerebroException.class, () -> dnaValidation.validate(getDnaWihtFormatSequenceDnaFail()));
-		assertEquals("Invalid characters in the DNA sequence", e.getMessage());
+		assertEquals("Invalid nucleotides!", e.getMessage());
 	}
 
 	@Test
@@ -58,7 +58,7 @@ public class DnaValidationTest {
 	}
 
 	private String[] getDnaWihtStructureFail() {
-		String[] dna = { "AAAT", "CCCT", "GTTT" };
+		String[] dna = { "AAAAAT", "CCCT", "GTTT" };
 		return dna;
 	}
 

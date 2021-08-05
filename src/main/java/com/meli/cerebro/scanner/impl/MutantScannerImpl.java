@@ -14,11 +14,12 @@ import com.meli.cerebro.validation.DnaValidation;
 public class MutantScannerImpl implements MutantScanner {
 
 	@Autowired
-	DnaValidation validation;
+	private DnaValidation validation;
 	
 	@Autowired
-	DnaSequencer dnaSequencer;
+	private DnaSequencer dnaSequencer;
 	
+	@Autowired
 	private HumanRepository dnaHumanRepository;
 	
 	private static final int MIN_SEQUENCES = 2;
@@ -52,7 +53,7 @@ public class MutantScannerImpl implements MutantScanner {
 			}
 
 		} catch (Exception e) {
-			throw new CerebroException("Error saving records into Person table");
+			throw new CerebroException("Error saving in Human");
 		}
 		
 		

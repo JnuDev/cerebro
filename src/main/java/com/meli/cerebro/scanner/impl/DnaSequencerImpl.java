@@ -183,7 +183,7 @@ public class DnaSequencerImpl implements DnaSequencer {
 	}		
 
 	private  int evalSequence(char a,char b ,char c, char d) {		
-		System.out.println(a+"-"+b +"- "+c +" -"+d);		
+	//	System.out.println(a+"-"+b +"- "+c +" -"+d);		
 		return (a == b && b == c && c == d)? 1:0;	
 	}
 	private  boolean evalSequencesCount(int count){
