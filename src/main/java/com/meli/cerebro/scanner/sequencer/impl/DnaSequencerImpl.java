@@ -1,8 +1,8 @@
-package com.meli.cerebro.scanner.impl;
+package com.meli.cerebro.scanner.sequencer.impl;
 
 import org.springframework.stereotype.Component;
 
-import com.meli.cerebro.scanner.DnaSequencer;
+import com.meli.cerebro.scanner.sequencer.DnaSequencer;
 import com.meli.cerebro.util.Utilities;
 
 @Component

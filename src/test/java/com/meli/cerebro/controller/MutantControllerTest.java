@@ -82,7 +82,7 @@ public class MutantControllerTest {
 
 		MutantService mutantService = Mockito.mock(MutantService.class);
 
-		when(mutantService.isMutant(dna)).thenThrow(new CerebroException("RepositoryException"));
+		when(mutantService.isMutant(dna)).thenThrow(new CerebroException("Error saving in Human"));
 		MutantController mutantController = new MutantController(mutantService);
 
 		ResponseEntity<String> responseController = mutantController.isMutant(dna);

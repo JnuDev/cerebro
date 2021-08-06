@@ -1,11 +1,10 @@
 package com.meli.cerebro.service.domain.pojo;
 
-
 public class Stats {
 	
-	private int mutans;
+	private double mutans;
 	
-	private int human;
+	private double humans;
 	
 	private double ratio;
 	
@@ -13,28 +12,38 @@ public class Stats {
 	 * 
 	 * 
 	 */
-	public Stats(int mutans, int human) {
+	public Stats(Integer mutans, Integer humans) {
 		super();
+		
 		this.mutans = mutans;
-		this.human = human;
-		this.ratio = (mutans > 0.0)?Math.round((mutans / human)* 10.0)/10.0 :0.0;;
+		this.humans = humans;
+		
+		this.ratio = (humans> 0.0)? Math.round((mutans/humans) * Math.pow(10, 1)) / Math.pow(10, 1): 0.0; 
+
 	}
 	
-
-	public int getMutansCount() {
+//	public static void main (String[] arg) {
+//		
+//		System.out.print(new Stats(40,100));
+//	}
+	
+	public double getCount_mutant_dna() {
 		return mutans;
 	}
 
-
-
-	public int getHumanCount() {
-		return human;
+	public double getCount_human_dna() {
+		return humans;
 	}
-
-
-
+	
+	
 	public double getRatio() {
 		return ratio;
 	}
+	
+
+//	@Override
+//	public String toString() {
+//		return "{count_mutant_dna:" + mutans + ", count_human_dna:" + humans + ", ratio:" + ratio + "}";
+//	}
 		
 }

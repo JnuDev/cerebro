@@ -14,6 +14,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 
 import com.meli.cerebro.exception.CerebroException;
 import com.meli.cerebro.repository.HumanRepository;
+import com.meli.cerebro.scanner.sequencer.DnaSequencer;
 import com.meli.cerebro.service.domain.Human;
 import com.meli.cerebro.validation.DnaValidation;
 

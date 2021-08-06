@@ -11,15 +11,4 @@ public class Dna {
 	public void setDna(String[] dna) {
 		this.dna = dna;
 	}
-	
-	/**
-	 * retorna el array de ADN mapeado en una matriz 
-	 * @return
-	 */
-	public String[][] getDnaMap() {
-		
-		//TODO evaluar utilidad 
-		
-		return null;		
-	}
 }
