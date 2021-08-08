@@ -48,27 +48,37 @@ consideraciones del servicio:
 
 /stats: Responde la cantidad de Mutantes, Humanos y la ratio entre los dos, de todos los humanos testeados no repetidos. 
 
----
-# App Engine
+------
+# Modelo MongoDB
+
+```Json
+Human{
+	"_id":1,
+	"dna":String,
+	"isMutant":boolean
+}
+``` 
+------
+# App Engine 
 
 Servicio : (https://cerebro-321923.ue.r.appspot.com/)
 
 
 
 
-# Documentación API
+# Documentación del API
 
-/swagger-ui.html
+[Ver Documentación](https://cerebro-321923.ue.r.appspot.com/swagger-ui.html)
 
-(https://github.com/JnuDev/cerebro/media/swagger_doc.png)
+![](https://github.com/jnudev/cerebro/blob/develop/media/swagger_doc.png)
 
-(https://github.com/JnuDev/cerebro/media/swagger_methods.png)
+![](https://github.com/jnudev/cerebro/blob/develop/media/swagger_methods.png)
 
 # Documentación Técnica 
 
 /javadoc/index.html
 
 #  Code coverage 
-(https://github.com/JnuDev/cerebro/media/clover_dashboard.png)
+![](https://github.com/jnudev/cerebro/blob/develop/media/clover_dashboard.png)
 
-(https://github.com/JnuDev/cerebro/media/clover_stats.png)
+![](https://github.com/jnudev/cerebro/blob/develop/media/clover_stats.png)
