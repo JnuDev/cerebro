@@ -5,29 +5,39 @@ Te ha contratado a ti para que desarrolles un proyecto que detecte si un
 humano es mutante basándose en su secuencia de ADN.
 
 
-##HERRAMIENTAS 
+## HERRAMIENTAS 
 
 
 [Git]
+
 [GitHub]
 
 [IDE Spring Tool Suite 4] 
+
 [Java 8]
+
 [Spring Boot 2]
+
 [Apache Maven 3.2.5]
+
 [JUnit 5]
+
 [Mockito]
+
 [Open clover 4](https://openclover.org/)
+
 [Swagger 9]
+
 [Javadoc]
 
 [MongoBD]
 
 [Docker]
+
 [App Engine]
 
 
-##SERVICIOS
+## SERVICIOS
 /mutant:  Mediante una secuencia de ADN (cadena de caracteres n*n) se determina si el sujeto es un mutante,
 consideraciones del servicio:
 
@@ -39,7 +49,7 @@ consideraciones del servicio:
 /stats: Responde la cantidad de Mutantes, Humanos y la ratio entre los dos, de todos los humanos testeados no repetidos. 
 
 ---
-#App Engine
+# App Engine
 
 Servicio : (cerebro-321923.appspot.com/)
 
@@ -50,8 +60,8 @@ Servicio : (cerebro-321923.appspot.com/)
 
 /swagger-ui.html
 
-#Documentación Técnica 
+# Documentación Técnica 
 
 /javadoc/index.html
 
-#
+
