@@ -1,0 +1,17 @@
+com.meli.cerebro
+com.meli.cerebro.controller
+com.meli.cerebro.dataset
+com.meli.cerebro.exception
+com.meli.cerebro.repository
+com.meli.cerebro.scanner
+com.meli.cerebro.scanner.impl
+com.meli.cerebro.scanner.sequencer
+com.meli.cerebro.scanner.sequencer.impl
+com.meli.cerebro.service
+com.meli.cerebro.service.domain
+com.meli.cerebro.service.domain.pojo
+com.meli.cerebro.service.impl
+com.meli.cerebro.swagger
+com.meli.cerebro.util
+com.meli.cerebro.validation
+com.meli.cerebro.validation.impl
