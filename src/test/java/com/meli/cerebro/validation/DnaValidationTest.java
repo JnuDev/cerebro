@@ -11,6 +11,7 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.meli.cerebro.dataset.Dataset;
 import com.meli.cerebro.exception.CerebroException;
 
 @SpringBootTest
@@ -27,49 +28,30 @@ public class DnaValidationTest {
 
 	@Test
 	public void validateDnaStructureFail() throws CerebroException {
-		Exception e = assertThrows(CerebroException.class, () -> dnaValidation.validate(getDnaWihtStructureFail()));
-		assertEquals("Invalid size DNA", e.getMessage());
-	}
-
-	@Test
-	public void validateSizeSequenceDnaFail() throws CerebroException {
-		Exception e = assertThrows(CerebroException.class, () -> dnaValidation.validate(getDnaWihtSizeSequenceDnaFail()));
+		Exception e = assertThrows(CerebroException.class, () -> dnaValidation.validate(Dataset.INVALID_SIZE));
 		assertEquals("Invalid size in the DNA sequence", e.getMessage());
 	}
 
 	@Test
+	public void validateSizeSequenceDnaFail() throws CerebroException {
+		Exception e = assertThrows(CerebroException.class, () -> dnaValidation.validate(Dataset.INVALID_NUCLEOTIDES));
+		assertEquals("Invalid nucleotides!", e.getMessage());
+	}
+
+	@Test
 	public void validateFormatSequenceDnaFail() throws CerebroException {
-		Exception e = assertThrows(CerebroException.class, () -> dnaValidation.validate(getDnaWihtFormatSequenceDnaFail()));
+		Exception e = assertThrows(CerebroException.class, () -> dnaValidation.validate(Dataset.INVALID_NUCLEOTIDES));
 		assertEquals("Invalid nucleotides!", e.getMessage());
 	}
 
 	@Test
 	public void validateStructureOK() throws CerebroException {
 		DnaValidation dnaValidationMock = Mockito.mock(DnaValidation.class);
-		doNothing().when(dnaValidationMock).validate(getDnaWihtStructureOK());
-		dnaValidationMock.validate(getDnaWihtStructureOK());
-		verify(dnaValidationMock, times(1)).validate(getDnaWihtStructureOK());
+		doNothing().when(dnaValidationMock).validate(Dataset.MUTANT_OK);
+		dnaValidationMock.validate(Dataset.MUTANT_OK);
+		verify(dnaValidationMock, times(1)).validate(Dataset.MUTANT_OK);
 
 	}
 
-	private String[] getDnaWihtStructureOK() {
-		String[] dna = { "ATGCG", "CATGC", "TATGT", "AGAGG", "CCGTA" };
-		return dna;
-	}
-
-	private String[] getDnaWihtStructureFail() {
-		String[] dna = { "AAAAAT", "CCCT", "GTTT" };
-		return dna;
-	}
-
-	private String[] getDnaWihtSizeSequenceDnaFail() {
-		String[] dna = { "ATGCGA", "CGTGC", "TTAGT", "AGAAGG", "CCCTA", "TCACTG" };
-		return dna;
-	}
-
-	private String[] getDnaWihtFormatSequenceDnaFail() {
-		String[] dna = { "ATGCGA", "CAGTGC", "TTXTGT", "AGAXGG", "CCCCTA", "TCXCTG" };
-		return dna;
-	}
-
+	
 }

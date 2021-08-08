@@ -17,7 +17,7 @@ public class Utilities {
 			int row = 0;
 			for (String vRow: vec) {						
 				char[] aChar = vRow.toCharArray();		
-				for (int col = 0; col < vecSize; col++) {
+				for (int col = 0; col < aChar.length; col++) {
 					matrix[row][col] = aChar[col];
 				}
 				row++;

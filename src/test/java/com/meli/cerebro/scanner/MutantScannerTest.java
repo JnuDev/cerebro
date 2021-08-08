@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
+import com.meli.cerebro.dataset.Dataset;
 import com.meli.cerebro.exception.CerebroException;
 import com.meli.cerebro.repository.HumanRepository;
 import com.meli.cerebro.scanner.sequencer.DnaSequencer;
@@ -34,8 +35,8 @@ public class MutantScannerTest {
 	
 	
 	@Test
-	public void isMutantAllStepsTrue() throws CerebroException {
-		String[] dna = new String[] { "ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" };
+	public void isMutantTrue() throws CerebroException {
+		String[] dna = Dataset.MUTANT_OK;
 
 	
 		doNothing().when(dnaValidation).validate(dna);
@@ -51,8 +52,8 @@ public class MutantScannerTest {
 	
 	
 	@Test
-	public void isMutantAllStepsFalse() throws CerebroException {
-		String[] dna = new String[] { "ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" };
+	public void isMutantFalse() throws CerebroException {
+		String[] dna =  Dataset.MUTANT_OK;
 
 		
 		doNothing().when(dnaValidation).validate(dna);
@@ -69,7 +70,7 @@ public class MutantScannerTest {
 	
 	@Test
 	public void isMutantSaveStepNullCase() throws CerebroException {
-		String[] dna = new String[] { "ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" };
+		String[] dna =  Dataset.MUTANT_OK;
 
 		
 		doNothing().when(dnaValidation).validate(dna);
@@ -87,7 +88,7 @@ public class MutantScannerTest {
 	
 	@Test
 	public void isMutantSaveStepHumanExistCase() throws CerebroException {
-		String[] dna = new String[] { "ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" };
+		String[] dna = Dataset.MUTANT_OK;
 
 		
 		doNothing().when(dnaValidation).validate(dna);
@@ -109,7 +110,7 @@ public class MutantScannerTest {
 	
 	@Test
 	public void isMutantSaveStepExceptionCase() throws CerebroException{
-		String[] dna = new String[] { "ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" };
+		String[] dna = Dataset.MUTANT_OK;
 
 		//execute validations
 		doNothing().when(dnaValidation).validate(dna);

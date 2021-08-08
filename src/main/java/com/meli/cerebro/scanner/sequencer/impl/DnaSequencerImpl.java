@@ -4,7 +4,11 @@ import org.springframework.stereotype.Component;
 
 import com.meli.cerebro.scanner.sequencer.DnaSequencer;
 import com.meli.cerebro.util.Utilities;
-
+/**
+ * 
+ * @author Jusuga
+ *
+ */
 @Component
 public class DnaSequencerImpl implements DnaSequencer {
 

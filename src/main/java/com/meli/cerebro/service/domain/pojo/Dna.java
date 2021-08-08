@@ -1,5 +1,10 @@
 package com.meli.cerebro.service.domain.pojo;
 
+/**
+ * 
+ * @author Jusuga
+ *
+ */
 public class Dna {
 	
 	private String[] dna;

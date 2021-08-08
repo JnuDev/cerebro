@@ -8,11 +8,8 @@ public class Stats {
 	
 	private double ratio;
 	
-	/*
-	 * 
-	 * 
-	 */
-	public Stats(Integer mutans, Integer humans) {
+
+	public Stats(double mutans, double humans) {
 		super();
 		
 		this.mutans = mutans;
@@ -21,12 +18,7 @@ public class Stats {
 		this.ratio = (humans> 0.0)? Math.round((mutans/humans) * Math.pow(10, 1)) / Math.pow(10, 1): 0.0; 
 
 	}
-	
-//	public static void main (String[] arg) {
-//		
-//		System.out.print(new Stats(40,100));
-//	}
-	
+		
 	public double getCount_mutant_dna() {
 		return mutans;
 	}
@@ -40,7 +32,6 @@ public class Stats {
 		return ratio;
 	}
 	
-
 //	@Override
 //	public String toString() {
 //		return "{count_mutant_dna:" + mutans + ", count_human_dna:" + humans + ", ratio:" + ratio + "}";

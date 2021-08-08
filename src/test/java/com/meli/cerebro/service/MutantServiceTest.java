@@ -12,6 +12,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import com.meli.cerebro.dataset.Dataset;
 import com.meli.cerebro.exception.CerebroException;
 import com.meli.cerebro.scanner.MutantScanner;
 import com.meli.cerebro.service.MutantService;
@@ -30,7 +31,7 @@ public class MutantServiceTest {
 	@Test
 	public void isMutantTrue() throws CerebroException {
 
-		String[] dnaStr = new String[] { "ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" };
+		String[] dnaStr =Dataset.MUTANT_OK;
 
 		Dna dna = new Dna();
 		dna.setDna(dnaStr);
@@ -49,7 +50,7 @@ public class MutantServiceTest {
 	@Test
 	public void isMutantFalse() throws CerebroException {
 
-		String[] dnaStr = new String[] { "ATAG", "CACG", "ACCG", "ATGG", "CGTA", "TCTG" };
+		String[] dnaStr = Dataset.HUMAN_OK;
 
 		Dna dna = new Dna();
 		dna.setDna(dnaStr);

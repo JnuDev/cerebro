@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import com.meli.cerebro.dataset.Dataset;
+
 class UtilitiesTest {
 
 	@Test
@@ -21,11 +23,11 @@ class UtilitiesTest {
 	
 	@Test
 	void getArrayToMatrixOK() {	
-		String[] dnaArray = { "AT", "CA" };		
-		char[][] dnaMatriz = {{'A','T'},{'C','A'}};		
+		String[] dnaArray =  Dataset.ARRAY_TO_MATRIX ;		
+		char[][] dnaMatriz = Dataset.MATRIX_OK;		
 		
 		char[][] matrix = Utilities.arrayToMatrix(dnaArray);		
 		assertArrayEquals(matrix, dnaMatriz);
-	}
-
+	}	
+		
 }

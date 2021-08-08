@@ -13,7 +13,11 @@ import com.meli.cerebro.exception.BaseException;
 import com.meli.cerebro.service.MutantService;
 import com.meli.cerebro.service.domain.pojo.Dna;
 
-
+/**
+ * 
+ * @author Jusuga
+ *
+ */
 @RestController
 public class MutantController {
 
@@ -24,6 +28,11 @@ public class MutantController {
 		this.mutantService = mutantService;
 	}
 
+	/**
+	 * DNA sequence must be of order N*N
+	 * @param dna String[] n*n  
+	 * @return HTTP/1.1 200  || HTTP/1.1 403
+	 */
 	
 	@RequestMapping(value = "/mutant", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> isMutant(@RequestBody Dna dna) {
