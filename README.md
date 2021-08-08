@@ -51,7 +51,7 @@ consideraciones del servicio:
 ---
 # App Engine
 
-Servicio : (cerebro-321923.appspot.com/)
+Servicio : (https://cerebro-321923.ue.r.appspot.com/)
 
 
 
@@ -60,8 +60,15 @@ Servicio : (cerebro-321923.appspot.com/)
 
 /swagger-ui.html
 
+(https://github.com/JnuDev/cerebro/media/swagger_doc.png)
+
+(https://github.com/JnuDev/cerebro/media/swagger_methods.png)
+
 # Documentación Técnica 
 
 /javadoc/index.html
 
+#  Code coverage 
+(https://github.com/JnuDev/cerebro/media/clover_dashboard.png)
 
+(https://github.com/JnuDev/cerebro/media/clover_stats.png)
