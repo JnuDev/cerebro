@@ -37,7 +37,7 @@ public class MutantController {
 	@RequestMapping(value = "/mutant", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> isMutant(@RequestBody Dna dna) {
 
-		ResponseEntity<String> response = null;
+ 		ResponseEntity<String> response = null;
 		try {
 			response = mutantService.isMutant(dna);
 		} catch (BaseException e) {
