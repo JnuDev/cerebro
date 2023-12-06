@@ -10,7 +10,6 @@ import com.meli.cerebro.exception.CerebroException;
 import com.meli.cerebro.service.StatsService;
 import com.meli.cerebro.service.domain.pojo.Stats;
 
-
 @RestController
 public class StatsController {
 
@@ -23,22 +22,21 @@ public class StatsController {
 
 	/**
 	 * Returns the statistics of scanned humans
+	 * 
 	 * @return {"ratio": y/x,"count_human_dna": x, "count_mutant_dna": y}
 	 */
 	@RequestMapping(value = "/stats", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Stats stats() {
 
 		Stats response = null;
-	
-			try {
-				response = statsService.getRatio();
-			} catch (CerebroException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		
+
+		try {
+			response = statsService.getRatio();
+		} catch (CerebroException e) {
+			e.printStackTrace();
+		}
+
 		return response;
 
 	}
 }
-

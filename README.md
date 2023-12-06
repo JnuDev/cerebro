@@ -60,27 +60,10 @@ consideraciones del servicio:
 |A|T|C|G|
 
 - El algoritmo busca secuencias con el siguiente flujo
-	- búsqueda en horizontal 
-	- 	recorre y valida si encuentra secuencias se acumula (secuencia + 1)
-	-	se valida: si las secuencias acumuladas son mayores a 1, termina la ejecución y se considera mutante, 
-	-	si no continua hasta recorrer la matriz 
-	- se valida: si las secuencias acumuladas son mayores a 1, termina la ejecución y se considera mutante, 
-	- si no continua búsqueda en vertical
-	-	recorre y valida si encuentra secuencias se acumula (secuencia + 1)
-	- 	se valida: si las secuencias acumuladas son mayores a 1, termina la ejecución y se considera mutante, 
-	-	si no continua hasta recorrer la matriz 
-	- se valida: si las secuencias acumuladas son mayores a 1, termina la ejecución y se considera mutante, 
-	- si no continua búsqueda en Diagonal Primaria 
-	-	recorre y valida si encuentra secuencias se acumula (secuencia + 1)
-	-	se valida: si las secuencias acumuladas son mayores a 1, termina la ejecución y se considera mutante, 
-	-	si no continua hasta recorrer la matriz 
-	- se valida: si las secuencias acumuladas son mayores a 1, termina la ejecución y se considera mutante, 
-	- si no continua búsqueda en Diagonal Secundaria 
-	-	recorre y valida si encuentra secuencias se acumula (secuencia + 1)
-	-	se valida: si las secuencias acumuladas son mayores a 1, termina la ejecución y se considera mutante, 
-	-	si no continua hasta recorrer la matriz 
-	- se valida: si las secuencias acumuladas son mayores a 1, termina la ejecución y se considera mutante, 
-	- si no es un humano.
+	- genera un lista con todas las posibles combinaciones de 4 letras consecutivas  
+    - mediante una expreción regular se valida cada registro, 
+        si las 4 letras son iguales en mas de 1 secuencia es un humano mutante de lo contrario es un humano. 
+	- el escaneo de secuencias termina si se encuentran 2 secuencias o si llega al final del listado con menos de una.
 
 [/stats]: Responde la cantidad de Mutantes, Humanos y la ratio entre los dos, de todos los humanos testeados no repetidos.
 
