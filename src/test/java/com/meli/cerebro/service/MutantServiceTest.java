@@ -1,7 +1,5 @@
 package com.meli.cerebro.service;
 
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
@@ -15,9 +13,7 @@ import org.springframework.http.ResponseEntity;
 import com.meli.cerebro.dataset.Dataset;
 import com.meli.cerebro.exception.CerebroException;
 import com.meli.cerebro.scanner.MutantScanner;
-import com.meli.cerebro.service.MutantService;
 import com.meli.cerebro.service.domain.pojo.Dna;
-
 
 @SpringBootTest
 public class MutantServiceTest {
@@ -31,7 +27,7 @@ public class MutantServiceTest {
 	@Test
 	public void isMutantTrue() throws CerebroException {
 
-		String[] dnaStr =Dataset.MUTANT_OK;
+		String[] dnaStr = Dataset.MUTANT_OK;
 
 		Dna dna = new Dna();
 		dna.setDna(dnaStr);
